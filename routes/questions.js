@@ -3,7 +3,6 @@ let Question = require("../models/question.model");
 
 router.route("/").get((req, res) => {
   Question.find()
-    .limit(10)
     .then(questions => res.json(questions))
     .catch(err => res.status(400).json("Error: " + err));
 });
