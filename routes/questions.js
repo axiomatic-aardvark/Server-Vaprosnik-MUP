@@ -14,6 +14,7 @@ router.route("/add").post((req, res) => {
   const option2 = req.body.option2;
   const option3 = req.body.option3;
   const option4 = req.body.option4;
+  const group = req.body.group || "";
 
   const date = Date.parse(req.body.date);
 
@@ -23,6 +24,7 @@ router.route("/add").post((req, res) => {
     option2,
     option3,
     option4,
+    group,
 
     date
   });
